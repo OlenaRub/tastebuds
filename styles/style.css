@@ -1,1 +1,12 @@
 
+body {
+    background-color: #86a291;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer{   
+    font-size: 16px;
+    color: #808080;
+    text-align: right;
+}
