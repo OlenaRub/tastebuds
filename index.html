@@ -3,11 +3,9 @@
 
 <head>
   <!-- Required meta tags -->
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link href="styles/style.css" type="text/css" rel="stylesheet">
 
   <title>Taste Buds</title>
@@ -28,13 +26,50 @@
         <li class="active"><a href="https://olenarub.github.io/tastebuds/">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="borsch.html">Reciepts</a></li>
-        <li><a href="#">Page 3</a></li>
+        <li><a href="#cuisine">Cuisine</a></li>
       </ul>
 
     </div>
   </nav>
 
-  Olena
+  <!--Anh-->
+  <div class="container">
+    <div class="row" id="cuisine">
+      <div class="col">
+        <p class="text-center display-4">Most Popular</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-8 col-md-4 my-3">
+        <div class="card border border-dark">
+          <img class="card-img-top" src="images/indian-cuisine.png" alt="Indian Cuisine"/>
+          <div class="card-body">
+            <p class="card-text text-left">Spicy, rich, and flavorful food inspired by Hindi culture and infused by numerous spices allows for a unique experience for your taste buds!! <span class="font-weight-bold">Read more</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-8 col-md-4 my-3">
+        <div class="card border border-dark">
+          <img class="card-img-top" src="images/italian-cuisine.png" alt="Italian Cuisine"/>
+          <div class="card-body">
+            <p class="card-text text-left">Mediterranean cuisine consisting of the ingredients, recipes, and cooking techniques developed across the Italian Peninsula sice antiquity... <span class="font-weight-bold">Learn more</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-8 col-md-4 my-3">
+        <div class="card border border-dark">
+          <img class="card-img-top" src="images/vegan-cuisine.jpeg" alt="Vegan Cuisine"/>
+          <div class="card-body">
+            <p card="card-text text-left">The cuisine is based on plants, such as vegetables, grains, nuts, and fruits. Vegans do not eat foods that come from animals, for example, meat! <span class="font-weight-bold">Learn more</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Olena-->
 
   <footer class="footer">
     <div class="container">
@@ -78,7 +113,10 @@
     </div>
   </footer>
 
-
+  <!-- Bootstrap's JavaScript Files -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 
 </html>
