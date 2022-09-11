@@ -13,34 +13,50 @@
 </head>
 
 <body>
+  <!--navbar component-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#home">
+      <img src="images/tastebuds.jpg" alt="Tastebuds' Logo" height="70"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <a href="https://olenarub.github.io/tastebuds/">
-        <img class="navbar-brand" src="images/tastebuds.jpg" alt="Taste Buds Logo"
-          style="border: solid; padding: 0; margin: 0;" width="80" height="40" />
-      </a>
-
-      <ul class="nav navbar-nav">
-        <!--<li class="active"><a href="https://olenarub.github.io/tastebuds/">Home</a></li>-->
-        <li class="active"><a href="https://olenarub.github.io/tastebuds/">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="borsch.html">Reciepts</a></li>
-        <li><a href="#cuisine">Cuisine</a></li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active" id="home">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#cuisine">Cuisines</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Recipes</a>
+        </li>
       </ul>
-
     </div>
   </nav>
 
-  <!--Anh-->
+  <!--jumbotron-->
+  <div class="jumbotron-fluid">
+    <div class="bg-secondary text-white text-center py-2">
+      <h1 class="display-4">Taste Buds Catered to You</h1>
+      <p>Search for the perfect recipe for you!</p>
+    </div>
+  </div>
+
   <div class="container">
     <div class="row" id="cuisine">
       <div class="col">
-        <p class="text-center display-4">Most Popular</p>
+        <h1 class="display-4 text-center my-2">Most Popular</h1>
       </div>
     </div>
+
     <div class="row justify-content-center">
-      <div class="col-8 col-md-4 my-3">
+      <div class="col-8 col-md-4 mb-3">
         <div class="card border border-dark">
           <img class="card-img-top" src="images/indian-cuisine.png" alt="Indian Cuisine"/>
           <div class="card-body">
@@ -49,7 +65,7 @@
         </div>
       </div>
 
-      <div class="col-8 col-md-4 my-3">
+      <div class="col-8 col-md-4 mb-3">
         <div class="card border border-dark">
           <img class="card-img-top" src="images/italian-cuisine.png" alt="Italian Cuisine"/>
           <div class="card-body">
@@ -58,13 +74,28 @@
         </div>
       </div>
 
-      <div class="col-8 col-md-4 my-3">
+      <div class="col-8 col-md-4 mb-3">
         <div class="card border border-dark">
           <img class="card-img-top" src="images/vegan-cuisine.jpeg" alt="Vegan Cuisine"/>
           <div class="card-body">
             <p card="card-text text-left">The cuisine is based on plants, such as vegetables, grains, nuts, and fruits. Vegans do not eat foods that come from animals, for example, meat! <span class="font-weight-bold">Learn more</span></p>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col">
+        <h1 class="text-left m-0">Articles</h1>
+      </div>
+    </div>
+
+    <div class="row bg-white mb-2">
+      <div class="col-6">
+        <a href="https://www.allrecipes.com/article/the-perfect-pantry/" target="_blank"><p>The Essential Ingredients in a Perfect Pantry</p></a>
+      </div>
+      <div class="col-6">
+        <a href="https://www.entrepreneur.com/leadership/6-easy-life-hacks-that-immediately-boost-your-energy/316256" target="_blank"><p>6 Easy Life Hacks That Immediatelyt Boost Your Energy</p></a>
       </div>
     </div>
   </div>
