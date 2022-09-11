@@ -1,7 +1,9 @@
 
 body {
-    background-color: aquamarine;
     background-image: url("../images/PeopleEatingHavingFun.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
