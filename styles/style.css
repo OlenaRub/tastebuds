@@ -5,6 +5,15 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.container {
+    overflow: hidden;
+}
+.container .articles {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .footer{   
     font-size: 16px;
     color: #808080;
