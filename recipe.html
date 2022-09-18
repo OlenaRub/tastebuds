@@ -7,13 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link href="styles/style.css" type="text/css" rel="stylesheet">
-    
-    <title>Taste Buds - Borsch</title>
-    
+  <title>Taste Buds - Recipe</title>   
+  <script>
+    function loadimage(){
+      prompt('Load Image')
+    }
+  </script>
+
+
 </head>
 <body>
-   <!--navbar component-->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!--navbar component-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://olenarub.github.io/tastebuds/">
       <img src="images/tastebuds.jpg" alt="Tastebuds' Logo" height="70"/>
     </a>
@@ -44,41 +49,58 @@
       </ul>
     </div>
   </nav>
+
   <!-- end navbar -->
 
-  <h2 class="d-flex justify-content-center"><strong><u>BORSCH</u></strong></h2>
+  <h2 class="d-flex justify-content-center"><strong><u>Your Recipe</u></strong></h2>
   
   <hr class="green">
-  <div class="d-inline-flex p-0">      
-    <img class="col-2" href="recipe.html" class="list-group-item list-group-item-action"
-      src="images/Borsch.jpeg" alt="Borscht Recipe Title" height="100" />
+  <form>
+  <div class="d-inline-flex p-0">     
+    <div class="col-2" href="recipe.html" class="list-group-item list-group-item-action">
+      <img alt="Load Image" height="100"  onclick="loadimage()" />
+    </div>
 
-    <ul class="col-2 text-dark" href="recipe.html" class="list-group-item list-group-item-action active">        
-    <li>1 onion</li>
-    <li>1 carrots</li>
-    <li>1 beets</li>
-    <li>3 potatoes</li>
-    <li>2 tomatoes </li>
-    <li>1/2 bell peppers</li>
-    <li>1/2 cabbage</li>
-    <li>dil</li>
-    <li>2 garlic cloves</li>
-    <li>oil</li>
+    <div class="col-3 text-dark" class="list-group-item list-group-item-action active">        
+    Ingredients:
+    <ul>
+    <li><input type="text" id="c1"></li>
+    <li><input type="text" id="c2"></li>
+    <li><input type="text" id="c3"></li>
+    <li><input type="text" id="c4"></li>
+    <li><input type="text" id="c5"></li>
+    <li><input type="text" id="c6"></li>
+    <li><input type="text" id="c7"></li>
+    <li><input type="text" id="c8"></li>
+    <li><input type="text" id="c9"></li>
+    <li><input type="text" id="c10"></li>
     </ul>
-    
-    <ol class="col-9 text-dark" href="recipe.html" class="list-group-item list-group-item-action active">       
-    <li>Finely chop the onion, put in a pot of cold water (about 3 liters), salt and boil.</li>
-    <li>Saute the grated beets and carrots in a little oil until translucent, about 5 minutes.</li>
-    <li>Grate the tomatoes and put into boiling water.</li>
-    <li>Then we put beets and carrots in a saucepan, boil.</li>
-    <li>Cut potatoes and bell pepper into cubes and place in a saucepan.</li>
-    <li>Cabbage cut into strips and put in a boiling borscht.</li>
-    <li>Add dill, garlic, salt (if necessary), boil for 5 minutes.</li>
+    </div>
+
+    <div class="col-9 text-dark" class="list-group-item list-group-item-action active"> 
+      Cooking Steps:
+      <ol>     
+      <li><textarea id="t1" rows="1" cols="70"> </textarea></li>
+      <li><textarea id="t2" rows="1" cols="70"> </textarea></li>
+      <li><textarea id="t3" rows="1" cols="70"> </textarea></li>
+      <li><textarea id="t4" rows="1" cols="70"> </textarea></li>
+      <li><textarea id="t5" rows="1" cols="70"> </textarea></li>
+      <li><textarea id="t6" rows="1" cols="70"> </textarea></li>      
+      <li><textarea id="t7" rows="1" cols="70"> </textarea></li>
+      <li><textarea id="t8" rows="1" cols="70"> </textarea></li>
     </ol>
+    </div>
     
   </div>
+  <br>
+  <h2 class="d-flex justify-content-center">
+  <button type="submit" class='input_submit' style="margin-right: 15px;" onClick="placeRecipe()">
+    Place Recipe
+  </button> 
+  </h2>
+
   <hr class="green">
-    
+  </form> 
 
   <!-- Footer -->
   <footer class="footer">
