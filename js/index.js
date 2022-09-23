@@ -20,7 +20,7 @@ function addItemCard(item){
 function loadStorageSampleData(){
   //  if(!localStorage.getItem("items")){
         const sampleItems = [{'name':'Borsch',
-        'img':'images/borsch.jpeg',
+        'img':'images/Borsch.jpeg',
         'description':'Ukranian Borsch'},
         {'name':'Small House',
         'img':'images/smallhouse.jpeg',
