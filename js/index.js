@@ -14,7 +14,7 @@ function addItemCard(item){
         '<br/>';
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += itemHTML;
-    //alert(itemHTML);
+    alert(itemHTML);
 }
 
 function loadStorageSampleData(){
