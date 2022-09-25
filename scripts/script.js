@@ -55,7 +55,7 @@ cookBook.addRecipe("Napolitan Tomato Sauce","My wife's Family Recipe for Napolit
 cookBook.addRecipe("Roman Tomato Sauce","My wife's Family Recipe for Roman Style Tomato Sauce!","./images/RomanSauce.jpg","09/23/2022");
 cookBook.addRecipe("Turino Tomato Sauce","My wife's Family Recipe for Turino Style Tomato Sauce!","./images/san-marzano-tomato-sauce-2.jpg","09/23/2022");
 cookBook.addRecipe("Grilled Cheese","Old Fashioned Grilled Cheese Sandwich - like mom made","./images/best-grilled-cheese-sandwich-468.jpg","09/24/2022");
-cookBook.addRecipe("Chunky Blue Cheese Burger","A hamburger for the millenium - juicy ground beef and chunks of bleu cheese!","./images/Chunky Blue Cheese Burger.jpg","09/23/2022");
+cookBook.addRecipe("Chunky Blue Cheese Burger - Perfect For Football","A hamburger for the millenium - juicy ground beef and chunks of bleu cheese!","./images/Chunky Blue Cheese Burger.jpg","09/23/2022");
 cookBook.addRecipe("Beef Stroganoff","Golden seared juicy beef strips smothered in an incredible sour cream mushroom gravy","./images/Classic Beef Stroganoff.jpg","09/23/2022");
 cookBook.addRecipe("Ultimate Oven Barbecued Ribs","These easy oven baked ribs with brown sugar are fall-off-the bone delicious.","./images/Grilled-BBQ-Ribs-8.jpg","09/23/2022");
 //console.log(cookBook.addRecipe[2]);
