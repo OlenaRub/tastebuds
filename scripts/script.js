@@ -65,11 +65,3 @@ for (i=0; i < cookBook.recipes.length; i++){
     addRecipeCard(cookBook.recipes[i]);
 }
 
-/* remove later
-addRecipeCard(cookBook.recipes[0]);
-addRecipeCard(cookBook.recipes[1]);
-addRecipeCard(cookBook.recipes[2]);
-addRecipeCard(cookBook.recipes[0]);
-addRecipeCard(cookBook.recipes[1]);
-addRecipeCard(cookBook.recipes[2]);
-*/
