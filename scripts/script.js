@@ -1,14 +1,13 @@
 /******** For testing localStorage *********************
-/*const sampleItems = [
+/*const recipeStorage = [
     {'name':'juice','img':'https://www.gs1india.org/media/Juice_pack.jpg','description':'Orange and Apple juice fresh and delicious'},
     {'name':'Tayto','img':'https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg','description':'Cheese & Onion Chips'}
 ];
 
-localStorage.setItem("recipes", JSON.stringify(cookBook.recipes));
+localStorage.setItem("recipeStorage", JSON.stringify(cookBook.recipes));
 */
-
 showNavbarHeader();
-showFooter ();
+showFooter();
 
 class RecipeController {
      constructor(currentId=0) {
@@ -35,24 +34,7 @@ class RecipeController {
             const recipes = JSON.parse(storageItems)
             //TODO load the items into the local items structure (this.items)           
         }
-    }*/
-};
-
-function addRecipeCard(recipe) {
-    const cardHTML = '<div class="card border border-dark m-1" style="width: 19rem;">\n' +
-      '    <div class="card-body">\n' +
-        '    <img class="card-img-top" src="' + recipe.imgURL + '" width="400" height="250"  alt="Recipe Image">\n' +
-        '        <h5 class="card-title">' + recipe.title + '</h5>\n' +
-        '        <p class="card-text">' + recipe.description + '</p>\n' + 
-        '        <div class="btn-group-sm">\n' +
-        '          <a href="#" class="btn btn-primary btn-sm m-1">View</a><a href="#" class="btn btn-primary btn-sm m-1">Add</a>\n' +
-        '        </div>\n' +
-        '  </div>\n' +
-        '</div>\n' +
-        '<br/>';
- 
-    const cardsContainer = document.getElementById("list-items");
-    cardsContainer.innerHTML += cardHTML;
+    }*******************************************************/
 };
 
 cookBook = new RecipeController();
@@ -65,9 +47,26 @@ cookBook.addRecipe("Beef Stroganoff","Golden seared juicy beef strips smothered 
 cookBook.addRecipe("Ultimate Oven Barbecued Ribs","These easy oven baked ribs with brown sugar are fall-off-the bone delicious.","./images/Grilled-BBQ-Ribs-8.jpg","09/23/2022");
 //console.log(cookBook.addRecipe[2]);
 
-
 for (i=0; i < cookBook.recipes.length; i++){
     addRecipeCard(cookBook.recipes[i]);
+};
+
+
+function addRecipeCard(recipe) {
+    const cardHTML = '<div class="card border border-dark m-1" style="width: 19rem;">\n' +
+      '    <div class="card-body">\n' +
+        '    <p>Cuisine(coming soon)</p><img class="card-img-top" src="' + recipe.imgURL + '" width="400" height="250"  alt="Recipe Image">\n' +
+        '        <h5 class="card-title">' + recipe.title + '</h5>\n' +
+        '        <p class="card-text">' + recipe.description + '</p>\n' + 
+        '        <div class="btn-group-sm">\n' +
+        '          <a href="#" class="btn btn-primary btn-sm m-1">View</a>\n' +
+        '        </div>\n' +
+        '  </div>\n' +
+        '</div>\n' +
+        '<br/>';
+ 
+    const cardsContainer = document.getElementById("list-items");
+    cardsContainer.innerHTML += cardHTML;
 };
 
 function showNavbarHeader () {
@@ -92,7 +91,7 @@ function showNavbarHeader () {
     '        <a class="nav-link" href="list.html">Search Recipes</a>' +  
     '      </li>' +  
     '      <li class="nav-item">' +  
-    '        <a class="nav-link" href="recipe.html">Recipe Page</a>' +  
+    '        <a class="nav-link" href="form.html">Add/Chg/Del Recipe</a>' +  
     '      </li>' +  
     '    </ul>' +  
     '  </div>' +  
@@ -113,14 +112,12 @@ function showFooter () {
     '            <li><a href="#">about us</a></li>' + 
     '            <li><a href="#">our services</a></li>' + 
     '            <li><a href="#">privaciy policy</a></li>' + 
-    '            <li><a href="#"></a></li>' + 
     '          </ul>' + 
     '        </div>' + 
     '        <div class="footer-col">' + 
     '          <h4>Get Help</h4>' + 
     '          <ul>' + 
     '            <li><a href="#">FAQ</a></li>' + 
-    '            <li><a href="#"></a></li>' + 
     '          </ul>' + 
     '        </div>' + 
     '        <div class="footer-col">' + 
