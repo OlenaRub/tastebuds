@@ -1,187 +1,146 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-/*    border: 1px solid black;*/
-}
+/******** For testing localStorage *********************
+/*const recipeStorage = [
+    {'name':'juice','img':'https://www.gs1india.org/media/Juice_pack.jpg','description':'Orange and Apple juice fresh and delicious'},
+    {'name':'Tayto','img':'https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg','description':'Cheese & Onion Chips'}
+];
 
-body {
-    background-image: url("../images/PeopleEatingHavingFun.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 10px;
-    padding: 10px;
-}
-
-ul {
-    list-style: none;
-}
-
-label {
-    font-size: 10px;
-    padding: 0%;
-    margin: 0%;
-}
-
-#recipeForm {
-    display: none;
-};
-
-input.form-control {
-  width: 90%;
-  height: 30px;
-  padding: 0%;
-  margin: 0%;
-  font-size: x-small;
-  text-align: center;
-  border: 1px solid black;
-}
-
-textarea.form-control {
-    width: 90%;
-    height: 125px;
-    padding: 2%;
-    margin: 0%;
-    font-size: x-small;
-    text-align: center;
-    border: 1px solid black; 
-}
-
-button.btn {
-  width: 40%;
-  height: 15%;
-  font-size: 12px;
-  text-align: center;
-  justify-content: center;
-  padding: 4px;
-  border: 1px solid black;
-}
-
-hr.green {
-  border: 2px solid green;
-}
-
-h5.card-title {
-    font-weight: bold;
-    text-decoration: underline;
-    font-size: 75%;
-}
-
-p.card-text {
-    font-size: 75%;
-}
-
-.container {
-    overflow: hidden;
-}
-
-.container .articles {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.container {
-    max-width: 1170px;
-    margin: auto;
-}
-
-#recipeTitle {
-    text-align: center;
-};
-
-.form-group {
-    padding: 0%;
-    margin: 0%;
-}
-
-.row {
-     display: flex;
-     flex-wrap: wrap;
-}
-
-.col {
-    padding: 0px;
-}
-
-.footer{   
-        font-size: 12px;
-        color: #808080;
-        text-align: left;
-}
-    
-.footer {
-    background-color: rgba(0, 0, 0, 0.856);
-    padding: 0 5px;
-}
-.footer-col {
-    width: 25%;
-    padding: 0 5px;
-}
-.footer-col h4 {
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
-    margin-bottom: 5px;
-    font-weight: 500;
-    position: relative;
-    text-decoration: underline;
-}
-/*.footer-col h4::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #e91e63;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-}*/
-.footer-col ul li:not(:last-child){
-    margin-bottom: 5px;
-}
-.footer-col ul li a {
-    font-size: 10px;
-    text-transform: capitalize;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
-    display: block;
-    transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-    color: #ffffff;
-    padding: 5px;
-}
-/*.footer-col .social-links a{
-    display: inline-block;
-    height: 10px;
-    width: 40px;
-    background-color: rgba(255, 255, 255, o.2);
-    margin: 0 2px 2px 0;
-    text-align: center;
-    line-height: 20px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-    color: #24262b;
-    background-color: #ffffff;
-}
+localStorage.setItem("recipeStorage", JSON.stringify(cookBook.recipes));
 */
-/* Responsive */
-@media(max-width: 767px){
-    .footer-col {
-        width: 50%;
-        margin-bottom: 5px;
-    }
-}
-@media(max-width: 576px){
-    .footer-col {
-        width: 100%;
-    }
-}
+showNavbarHeader();
+showFooter();
+
+class RecipeController {
+     constructor(currentId=0) {
+         this.recipes = []; 
+         this.currentId = currentId;
+     };
+
+     addRecipe(title, description, imgURL, createdAt){ 
+         const recipe = {   //recipe is an object
+             id: this.currentId++,
+             title: title,
+             description: description,
+             imgURL: imgURL,
+             createdAt: createdAt
+         };
+
+         this.recipes.push(recipe); 
+     };
+
+     /******** For testing localStorage *********************
+     loadRecipesFromLocalStorage() {
+        const storageItems = localStorage.getItem("recipes")
+        if (storageItems) {
+            const recipes = JSON.parse(storageItems)
+            //TODO load the items into the local items structure (this.items)           
+        }
+    }*******************************************************/
+};
+
+cookBook = new RecipeController();
+cookBook.addRecipe("Napolitan Tomato Sauce","My wife's Family Recipe for Napolitan Style Tomato Sauce!","./images/NapolitanSauce.jpg","09/23/2022");
+cookBook.addRecipe("Roman Tomato Sauce","My wife's Family Recipe for Roman Style Tomato Sauce!","./images/RomanSauce.jpg","09/23/2022");
+cookBook.addRecipe("Turino Tomato Sauce","My wife's Family Recipe for Turino Style Tomato Sauce!","./images/san-marzano-tomato-sauce-2.jpg","09/23/2022");
+cookBook.addRecipe("Grilled Cheese","Old Fashioned Grilled Cheese Sandwich - like mom made","./images/best-grilled-cheese-sandwich-468.jpg","09/24/2022");
+cookBook.addRecipe("Chunky Blue Cheese Burger - Perfect For Football","A hamburger for the millenium - juicy ground beef and chunks of bleu cheese!","./images/Chunky Blue Cheese Burger.jpg","09/23/2022");
+cookBook.addRecipe("Beef Stroganoff","Golden seared juicy beef strips smothered in a sour cream mushroom gravy","./images/Classic Beef Stroganoff.jpg","09/23/2022");
+cookBook.addRecipe("Ultimate Oven Barbecued Ribs","These easy oven baked ribs with brown sugar are fall-off-the bone delicious.","./images/Grilled-BBQ-Ribs-8.jpg","09/23/2022");
+//console.log(cookBook.addRecipe[2]);
+
+for (i=0; i < cookBook.recipes.length; i++){
+    addRecipeCard(cookBook.recipes[i]);
+};
+
+
+function addRecipeCard(recipe) {
+    const cardHTML = '<div class="card border border-dark m-1" style="width: 19rem;">\n' +
+      '    <div class="card-body">\n' +
+        '    <p>Cuisine(coming soon)</p><img class="card-img-top" src="' + recipe.imgURL + '" width="400" height="250"  alt="Recipe Image">\n' +
+        '        <h5 class="card-title">' + recipe.title + '</h5>\n' +
+        '        <p class="card-text">' + recipe.description + '</p>\n' + 
+        '        <div class="btn-group-sm">\n' +
+        '          <a href="#" class="btn btn-primary btn-sm m-1">View</a>\n' +
+        '        </div>\n' +
+        '  </div>\n' +
+        '</div>\n' +
+        '<br/>';
+ 
+    const cardsContainer = document.getElementById("list-items");
+    cardsContainer.innerHTML += cardHTML;
+};
+
+function showNavbarHeader () {
+    document.getElementById("navbar-header").innerHTML = 
+    '  <!--navbar component-->' +
+    '  <nav class="navbar navbar-expand-lg navbar-light bg-light">' +  
+    '    <a class="navbar-brand" href="https://olenarub.github.io/tastebuds/">' +  
+    '      <img src="images/tastebuds.jpg" alt="Tastebuds Logo" height="70"/>' +  
+    '    </a>' +  
+    '    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">' +  
+    '      <span class="navbar-toggler-icon"></span>' +
+    '    </button>' +  
+    '  <div class="collapse navbar-collapse" id="navbarSupportedContent">' +  
+    '    <ul class="navbar-nav">' +  
+    '      <li class="nav-item active" id="home">' +  
+    '        <a class="nav-link" href="./index.html">Home</a>' +  
+    '      </li>' +  
+    '      <li class="nav-item">' +  
+    '        <a class="nav-link" href="about.html">About Us</a>' +  
+    '      </li>' +  
+    '      <li class="nav-item">' +  
+    '        <a class="nav-link" href="list.html">Search Recipes</a>' +  
+    '      </li>' +  
+    '      <li class="nav-item">' +  
+    '        <a class="nav-link" href="recipe.html">Add/Chg/Del Recipe</a>' +  
+    '      </li>' +  
+    '    </ul>' +  
+    '  </div>' +  
+    
+    '  </nav>'
+    '  <!-- end navbar -->';
+};
+
+function showFooter () {
+  document.getElementById("page-footer").innerHTML = 
+    '  <!-- Footer -->' + 
+    '  <footer class="footer">' + 
+    '    <div class="container">' + 
+    '      <div class="row">' + 
+    '        <div class="footer-col">' + 
+    '          <h4>company</h4>' + 
+    '          <ul>' + 
+    '            <li><a href="#">about us</a></li>' + 
+    '            <li><a href="#">our services</a></li>' + 
+    '            <li><a href="#">privaciy policy</a></li>' + 
+    '          </ul>' + 
+    '        </div>' + 
+    '        <div class="footer-col">' + 
+    '          <h4>Get Help</h4>' + 
+    '          <ul>' + 
+    '            <li><a href="#">FAQ</a></li>' + 
+    '          </ul>' + 
+    '        </div>' + 
+    '        <div class="footer-col">' + 
+    '          <h4>online order</h4>' + 
+    '          <ul>' + 
+    '            <li><a href="#">payment option</a></li>' + 
+    '            <li><a href="#">order status</a></li>' + 
+    '          </ul>' + 
+    '        </div>' + 
+    '        <div class="footer-col">' + 
+    '          <h4>Follow Us</h4>' + 
+    '          <ul>' + 
+    '          <!--<div class="social-links">-->' + 
+    '            <li><a href="#"><i class="fab fa-facebook-f">Facebook</i></a></li>' + 
+    '            <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>' + 
+    '            <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>' + 
+    '            <li><a href="#"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>' + 
+    '          <!--</div>-->' + 
+    '          </ul>' + 
+    '        </div>' + 
+    '      </div>' + 
+    '    </div>' + 
+    '  </footer>' +
+    '<!-- End Footer -->';   
+
+};
