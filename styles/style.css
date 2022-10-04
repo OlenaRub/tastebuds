@@ -19,37 +19,11 @@ ul {
     list-style: none;
 }
 
-label {
+/*label {
     font-size: 10px;
     padding: 0%;
     margin: 0%;
-}
-
-#recipeForm {
-    display:inline;
-    align-self:flex-start;
-};
-
-input.form-control {
-  width: 25%;
-  height: 25%;
-  padding: 0%;
-  margin: 0%;
-  font-size: 75%;
-  text-align: center;
-  justify-content:center;
-  border: 1px solid black;
-}
-
-textarea.form-control {
-    width: 100%;
-    height: 50px;
-    padding: 1%;
-    margin: 0%;
-    font-size: 100%;
-    text-align:justify;
-    border: 1px solid black; 
-}
+}*/
 
 button.btn {
   width: 10%;
@@ -97,15 +71,6 @@ p.card-text {
 .container {
     max-width: 1170px;
     margin: auto;
-}
-
-#recipeTitle {
-    text-align:center;
-}
-
-.form-group {
-    padding: 0%;
-    margin: 0%;
 }
 
 .row {
@@ -197,7 +162,42 @@ p.card-text {
     }
 }
 
+/**** CSS for the form page *****/
+input.form-control {
+    width: 100%;
+    height: 40px;
+    padding: 1%;
+    margin: 0%;
+    font-size: 75%;
+    text-align: start;
+    justify-content:center;
+    border: 1px solid black;
+}
+  
+textarea.form-control {
+      width: 100%;
+      height: 80px;
+      padding: 1%;
+      margin: 0%;
+      font-size: 75%;
+      text-align: start;
+      border: 1px solid black; 
+}
+
+.form-group {
+    padding: 0%;
+    margin: 0%;
+};
+
+#recipeForm {
+    display:inline;
+    align-self:flex-start;
+};
+
 .recipe-image {
     width: 55%;
-    ;
+};
+
+#recipeTitle {
+    text-align: start;
 };
