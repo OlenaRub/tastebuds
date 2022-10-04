@@ -1,3 +1,5 @@
+var seqNbr = 6;
+
 /******** For testing localStorage *********************
 /*const recipeStorage = [
     {'name':'juice','img':'https://www.gs1india.org/media/Juice_pack.jpg','description':'Orange and Apple juice fresh and delicious'},
@@ -41,7 +43,8 @@ cookBook = new RecipeController();
 cookBook.addRecipe("Napolitan Tomato Sauce","My wife's Family Recipe for Napolitan Style Tomato Sauce!","./images/NapolitanSauce.jpg","09/23/2022");
 cookBook.addRecipe("Roman Tomato Sauce","My wife's Family Recipe for Roman Style Tomato Sauce!","./images/RomanSauce.jpg","09/23/2022");
 cookBook.addRecipe("Turino Tomato Sauce","My wife's Family Recipe for Turino Style Tomato Sauce!","./images/san-marzano-tomato-sauce-2.jpg","09/23/2022");
-cookBook.addRecipe("Grilled Cheese","Old Fashioned Grilled Cheese Sandwich - like mom made","./images/best-grilled-cheese-sandwich-468.jpg","09/24/2022");
+cookBook.addRecipe("Borscht","Everyone knows what it is and many people around the world have fallen in love with this iconic beet soup.","./images/Borscht.jpg","09/23/2022");
+cookBook.addRecipe("Grilled Cheese","Old Fashioned Grilled Cheese Sandwich - like mom made","./images/grilled-cheese-sandwich.jpg","09/24/2022");
 cookBook.addRecipe("Chunky Blue Cheese Burger - Perfect For Football","A hamburger for the millenium - juicy ground beef and chunks of bleu cheese!","./images/Chunky Blue Cheese Burger.jpg","09/23/2022");
 cookBook.addRecipe("Beef Stroganoff","Golden seared juicy beef strips smothered in a sour cream mushroom gravy","./images/Classic Beef Stroganoff.jpg","09/23/2022");
 cookBook.addRecipe("Ultimate Oven Barbecued Ribs","These easy oven baked ribs with brown sugar are fall-off-the bone delicious.","./images/Grilled-BBQ-Ribs-8.jpg","09/23/2022");
@@ -91,7 +94,7 @@ function showNavbarHeader () {
     '        <a class="nav-link" href="list.html">Search Recipes</a>' +  
     '      </li>' +  
     '      <li class="nav-item">' +  
-    '        <a class="nav-link" href="recipe.html">Add/Chg/Del Recipe</a>' +  
+    '        <a class="nav-link" href="form.html">Add A Recipe</a>' +  
     '      </li>' +  
     '    </ul>' +  
     '  </div>' +  
@@ -143,4 +146,21 @@ function showFooter () {
     '  </footer>' +
     '<!-- End Footer -->';   
 
+};
+
+function addInstruction () {
+  seqNbr = seqNbr + 1;
+  instList = document.getElementById("instructList");
+  instList.innerHTML = instList.innerHTML + 
+      '<li><input type="text" placeholder="instruction ' + seqNbr + '" class="form-control" id="instruction_' + seqNbr + '"></li>';
+};
+
+function showImage () {
+  imgElement = document.getElementById("recipe-image");
+  if (document.getElementById("recipeImageUrl").value === "") {
+    imgElement.innerHTML = '<img class="recipe-image" src="images/DefaultImage.jpg" alt="" />'
+  }
+  else {
+    imgElement.innerHTML = '<img class="recipe-image" src="' + document.getElementById("recipeImageUrl").value + '" alt="" />';
+  } 
 };
