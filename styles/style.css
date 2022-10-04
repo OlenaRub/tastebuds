@@ -26,36 +26,39 @@ label {
 }
 
 #recipeForm {
-    display: none;
+    display:inline;
+    align-self:flex-start;
 };
 
 input.form-control {
-  width: 90%;
-  height: 30px;
+  width: 25%;
+  height: 25%;
   padding: 0%;
   margin: 0%;
-  font-size: x-small;
+  font-size: 75%;
   text-align: center;
+  justify-content:center;
   border: 1px solid black;
 }
 
 textarea.form-control {
-    width: 90%;
-    height: 125px;
-    padding: 2%;
+    width: 100%;
+    height: 50px;
+    padding: 1%;
     margin: 0%;
-    font-size: x-small;
-    text-align: center;
+    font-size: 100%;
+    text-align:justify;
     border: 1px solid black; 
 }
 
 button.btn {
-  width: 40%;
-  height: 15%;
-  font-size: 12px;
+  width: 10%;
+  height: 25%;
+  font-size: 75%;
   text-align: center;
   justify-content: center;
-  padding: 4px;
+  padding: 0%;
+  margin: 2%
   border: 1px solid black;
 }
 
@@ -63,6 +66,14 @@ hr.green {
   border: 2px solid green;
 }
 
+#cuisineHdg {
+    text-align: center;
+}
+
+.article {
+    font-size: 75%;
+}
+  
 h5.card-title {
     font-weight: bold;
     text-decoration: underline;
@@ -89,8 +100,8 @@ p.card-text {
 }
 
 #recipeTitle {
-    text-align: center;
-};
+    text-align:center;
+}
 
 .form-group {
     padding: 0%;
@@ -185,3 +196,8 @@ p.card-text {
         width: 100%;
     }
 }
+
+.recipe-image {
+    width: 55%;
+    ;
+};
