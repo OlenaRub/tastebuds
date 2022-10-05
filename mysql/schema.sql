@@ -10,40 +10,49 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
 USE `mydb` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`countries`
+-- Table `mydb`.`cuisines`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`countries` (
+CREATE TABLE IF NOT EXISTS `mydb`.`cuisines` (
   `id` INT not NULL,
   `name` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `mydb`.`ingredients`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`ingredients` (
+  `id` INT not NULL,
+  `name` VARCHAR(100) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `mydb`.`reciepts`
+-- Table `mydb`.`recipes`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`reciepts` (
+CREATE TABLE IF NOT EXISTS `mydb`.`recipes` (
   `id` INT not NULL,
   `name` VARCHAR(45) NULL,
   `image` VARCHAR(45) NULL,
   `description` VARCHAR(100) NULL,
-  `ingredients` VARCHAR(500) NULL,
+  `ingredientsId` INT NULL,
+  `amount` VARCHAR(45) NULL,
   `instructions` VARCHAR(10000) NULL,
-  `countryId` INT NULL,
+  `cuisinesId` INT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
-  INDEX `fk_idx` (`countryId` ASC) VISIBLE,
+  INDEX `fk_idx` (`cuisinesId` ASC) VISIBLE,
   CONSTRAINT `fk`
-    FOREIGN KEY (`countryId`)
-    REFERENCES `mydb`.`countries` (`id`)
+    FOREIGN KEY (`cuisinesId`)
+    REFERENCES `mydb`.`cuisines` (`id`),
+    INDEX `fk1_idx` (`ingredientsId` ASC) VISIBLE,
+  CONSTRAINT `fk1`
+    FOREIGN KEY (`ingredientsId`)
+    REFERENCES `mydb`.`ingredients` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -52,5 +61,7 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
 create user 'admin'@'%' identified by 'passw0rd';
 grant all on itemsdb.* to 'admin'@'%'; 
