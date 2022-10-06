@@ -4,12 +4,13 @@
     box-sizing: border-box;
     /*border: 1px solid black;*/
 }
-body {
-    background-image: url("../images/PeopleEatingHavingFun.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+.tastebuddies {
+    font-size: 67px;
+}
+
+.carousel-item img {
+    height: 320px;
 }
 
 ul {
@@ -19,9 +20,11 @@ ul {
 hr.green {
     border: 2px solid green;
 }
+
 .container {
     overflow: hidden;
 }
+
 .container .articles {
     max-width: 100%;
     height: auto;
@@ -37,20 +40,23 @@ hr.green {
 .container {
     max-width: 1170px;
     margin: auto;
-    }
+}
+
 .row {
-     display: flex;
-     flex-wrap: wrap;
-    }
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .footer {
     background-color: rgba(0, 0, 0, 0.856);
     padding: 7opx 0;
 }
+
 .footer-col {
     width: 25%;
     padding: 0 15px;
 }
+
 .footer-col h4 {
     font-size: 18px;
     color: #ffffff;
@@ -59,6 +65,7 @@ hr.green {
     font-weight: 500;
     position: relative;
 }
+
 .footer-col h4::before {
     content: '';
     position: absolute;
@@ -69,9 +76,11 @@ hr.green {
     box-sizing: border-box;
     width: 50px;
 }
+
 .footer-col ul li:not(:last-child){
     margin-bottom: 10px;
 }
+
 .footer-col ul li a {
     font-size: 16px;
     text-transform: capitalize;
@@ -82,10 +91,12 @@ hr.green {
     display: block;
     transition: all 0.3s ease;
 }
+
 .footer-col ul li a:hover{
     color: #ffffff;
     padding: 8px;
 }
+
 .footer-col .social-links a{
     display: inline-block;
     height: 40px;
@@ -98,6 +109,7 @@ hr.green {
     color: #ffffff;
     transition: all 0.5s ease;
 }
+
 .footer-col .social-links a:hover{
     color: #24262b;
     background-color: #ffffff;
@@ -110,6 +122,7 @@ hr.green {
         margin-bottom: 30px;
     }
 }
+
 @media(max-width: 576px){
     .footer-col {
         width: 100%;
