@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="styles/style.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <title>Recipe Form Page</title>
+</head>
+
+<body class="body-image">
+  <!--navbar component-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/tastebuds.jpg" alt="Tastebuds' Logo" height="85">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active" id="home">
+          <a class="nav-link" href="index.html"><h5>Home</h5><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"><h5>About Us</h5></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="list.html"><h5>Search Recipes</h5></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="form.html"><h5>Add A Recipe</h5></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Recipe Input Form -->
+  <div class="container">
+    <div class="row">
+      <div class="col ml-2">
+        <p class="my-2 col-7"><strong><u>Taste Buds Recipe Form</u></strong>
+        <button type="submit" class="btn btn-primary">Save</button></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ml-2">
+        <form id="recipeForm">
+          <div class="form-group">
+            <input type="text" placeholder="Title" class="form-control" id="recipeTitle">
+            <textarea type="text" placeholder="Description" class="form-control" id="recipeDescription"></textarea>
+            <hr class="green">
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ml-2">
+        <!--<div class="form-group">-->
+          <input type="text" placeholder="Cuisine" class="form-control" id="recipeCuisine">
+      </div>
+      <div class="col ml-2">
+        <!--<div class="form-group">-->
+          <input type="text" placeholder="Image URL" class="form-control" id="recipeImageUrl" onchange="showImage()">
+      </div>
+        </form>
+    </div>
+  </div>
+
+  <!-- End Recipe Input Form -->
+  <div class="form">
+    <br>
+    <table class="table">
+      <tr>
+        <thead>
+          <strong><u>Ingredients</u></strong>
+        </thead>
+      </tr>
+      <tr>
+        <td>
+          <ul id="ingredList1">
+            <li><input type="text" placeholder="ingredient 1" class="form-control" id="ingredient_01"></li>
+            <li><input type="text" placeholder="ingredient 2" class="form-control" id="ingredient_02"></li>
+            <li><input type="text" placeholder="ingredient 3" class="form-control" id="ingredient_03"></li>
+            <li><input type="text" placeholder="ingredient 4" class="form-control" id="ingredient_04"></li>
+            <li><input type="text" placeholder="ingredient 5" class="form-control" id="ingredient_05"></li>
+            <li><input type="text" placeholder="ingredient 6" class="form-control" id="ingredient_06"></li>
+            <li><input type="text" placeholder="ingredient 7" class="form-control" id="ingredient_07"></li>
+            <li><input type="text" placeholder="ingredient 8" class="form-control" id="ingredient_08"></li>
+            <li><input type="text" placeholder="ingredient 9" class="form-control" id="ingredient_09"></li>
+            <li><input type="text" placeholder="ingredient 10" class="form-control" id="ingredient_10"></li>
+          </ul>
+        </td>
+        <td>
+          <ul id="ingredList2">
+            <li><input type="text" placeholder="ingredient 11" class="form-control" id="ingredient_11"></li>
+            <li><input type="text" placeholder="ingredient 12" class="form-control" id="ingredient_12"></li>
+            <li><input type="text" placeholder="ingredient 13" class="form-control" id="ingredient_13"></li>
+            <li><input type="text" placeholder="ingredient 14" class="form-control" id="ingredient_14"></li>
+            <li><input type="text" placeholder="ingredient 15" class="form-control" id="ingredient_15"></li>
+            <li><input type="text" placeholder="ingredient 16" class="form-control" id="ingredient_16"></li>
+            <li><input type="text" placeholder="ingredient 17" class="form-control" id="ingredient_17"></li>
+            <li><input type="text" placeholder="ingredient 18" class="form-control" id="ingredient_18"></li>
+            <li><input type="text" placeholder="ingredient 19" class="form-control" id="ingredient_19"></li>
+            <li><input type="text" placeholder="ingredient 20" class="form-control" id="ingredient_20"></li>
+          </ul>
+        </td>
+        <td align="left" id="recipe-image">
+          <img class="recipe-image" src="images/DefaultImage.jpg" alt="" />
+        </td>
+      </tr>
+    </table>
+    <table class="table">
+      <tr>
+        <thead>
+          <strong id="inst"><u>Instructions</u></strong>
+        </thead>
+      </tr>
+      <tr>
+        <td>
+          <ol id="instructList">
+            <li><input type="text" placeholder="instruction 1" class="form-control" id="instruction_1"></li>
+            <li><input type="text" placeholder="instruction 2" class="form-control" id="instruction_2"></li>
+            <li><input type="text" placeholder="instruction 3" class="form-control" id="instruction_3"></li>
+            <li><input type="text" placeholder="instruction 4" class="form-control" id="instruction_4"></li>
+            <li><input type="text" placeholder="instruction 5" class="form-control" id="instruction_5"></li>
+            <li><input type="text" placeholder="instruction 6" class="form-control" id="instruction_6"></li>
+          </ol>            
+          <button class="btn btn-primary" type="button" onclick="addInstruction()" class="btn btn-primary">Add Next Instruction</button>
+        </td>     
+      </tr>
+    </table>
+  </div>
+
+  <!--Olena-->
+  <footer class="footer mt-3 pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="about.html">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privaciy policy</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>online order</h4>
+          <ul>
+            <li><a href="#">payment option</a></li>
+            <li><a href="#">order status</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <ul>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--footer copyright-->
+      <div class="row">
+        <div class="col">
+          <p class="copyright text-center">&copy; TASTE BUDS</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project JavaScript Files -->
+  <script src="./scripts/script.js"></script>
+
+  <!-- Bootstrap's JavaScript Files -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>

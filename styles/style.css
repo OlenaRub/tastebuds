@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*border: 1px solid black;*/
+/*    border: 1px solid black;*/
 }
 
 .tastebuddies {
@@ -13,13 +13,64 @@
     height: 320px;
 }
 
+.body-image {
+    background-image: url("../images/PeopleEatingHavingFun.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
 ul {
     list-style: none;
 }
 
-hr.green {
-    border: 2px solid green;
+
+/*label {
+    font-size: 10px;
+    padding: 0%;
+    margin: 0%;
+}*/
+
+button.btn {
+  width: 10%;
+  height: 25%;
+  font-size: 75%;
+  text-align: center;
+  justify-content: center;
+  padding: 0%;
+  margin: 2%
+  border: 1px solid black;
 }
+
+/*
+hr.green {
+  border: 2px solid green;
+}
+
+#cuisineHdg {
+    text-align: center;
+}
+
+.article {
+    font-size: 75%;
+}
+  
+h5.card-title {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 75%;
+}
+
+p.card-text {
+    font-size: 75%;
+}
+*/
 
 .container {
     overflow: hidden;
@@ -31,39 +82,47 @@ hr.green {
     display: block;
 }
 
-.footer{   
-    font-size: 16px;
-    color: #808080;
-    text-align: right;
-}
-
 .container {
     max-width: 1170px;
     margin: auto;
 }
+
 
 .row {
     display: flex;
     flex-wrap: wrap;
 }
 
+/*
+.col {
+    padding: 0px;
+}
+*/
+
+.footer{
+    font-size: 16px;
+    color: #808080;
+    text-align: left;
+}
+    
 .footer {
     background-color: rgba(0, 0, 0, 0.856);
-    padding: 7opx 0;
+    padding: 0 15px;
 }
 
 .footer-col {
     width: 25%;
-    padding: 0 15px;
+    padding: 5px;
 }
 
 .footer-col h4 {
     font-size: 18px;
     color: #ffffff;
     text-transform: capitalize;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-weight: 500;
     position: relative;
+    /*text-decoration: underline;*/
 }
 
 .footer-col h4::before {
@@ -78,7 +137,7 @@ hr.green {
 }
 
 .footer-col ul li:not(:last-child){
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .footer-col ul li a {
@@ -94,17 +153,17 @@ hr.green {
 
 .footer-col ul li a:hover{
     color: #ffffff;
-    padding: 8px;
+    padding: 2px;
 }
 
-.footer-col .social-links a{
+.footer-col .social-links a {
     display: inline-block;
-    height: 40px;
+    height: 10px;
     width: 40px;
-    background-color: rgba(255, 255, 255, o.2);
-    margin: 0 10px 10px 0;
+    background-color: rgba(255, 255, 255, o.2);   /*is it zero ???*/
+    margin: 0 2px 2px 0;
     text-align: center;
-    line-height: 40px;
+    line-height: 20px;
     border-radius: 50%;
     color: #ffffff;
     transition: all 0.5s ease;
@@ -119,7 +178,7 @@ hr.green {
 @media(max-width: 767px){
     .footer-col {
         width: 50%;
-        margin-bottom: 30px;
+        margin-bottom: 5px;
     }
 }
 
@@ -128,3 +187,43 @@ hr.green {
         width: 100%;
     }
 }
+
+/**** CSS for the form page *****/
+input.form-control {
+    width: 100%;
+    height: 40px;
+    padding: 1%;
+    margin: 0%;
+    font-size: 75%;
+    text-align: start;
+    justify-content:center;
+    border: 1px solid black;
+}
+  
+textarea.form-control {
+    width: 100%;
+    height: 80px;
+    padding: 1%;
+    margin: 0%;
+    font-size: 75%;
+    text-align: start;
+    border: 1px solid black; 
+}
+
+.form-group {
+    padding: 0%;
+    margin: 0%;
+};
+
+#recipeForm {
+    display:inline;
+    align-self:flex-start;
+};
+
+.recipe-image {
+    width: 55%;
+};
+
+#recipeTitle {
+    text-align: start;
+};
