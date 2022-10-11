@@ -5,19 +5,31 @@
 /*    border: 1px solid black;*/
 }
 
-body {
+.tastebuddies {
+    font-size: 67px;
+}
+
+.carousel-item img {
+    height: 320px;
+}
+
+.body-image {
     background-image: url("../images/PeopleEatingHavingFun.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.form {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 10px;
-    padding: 10px;
+    margin: 20px;
+    padding: 20px;
 }
 
 ul {
     list-style: none;
 }
+
 
 /*label {
     font-size: 10px;
@@ -36,6 +48,7 @@ button.btn {
   border: 1px solid black;
 }
 
+/*
 hr.green {
   border: 2px solid green;
 }
@@ -57,6 +70,7 @@ h5.card-title {
 p.card-text {
     font-size: 75%;
 }
+*/
 
 .container {
     overflow: hidden;
@@ -73,39 +87,45 @@ p.card-text {
     margin: auto;
 }
 
+
 .row {
-     display: flex;
-     flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+/*
 .col {
     padding: 0px;
 }
+*/
 
-.footer{   
-        font-size: 12px;
-        color: #808080;
-        text-align: left;
+.footer{
+    font-size: 16px;
+    color: #808080;
+    text-align: left;
 }
     
 .footer {
     background-color: rgba(0, 0, 0, 0.856);
-    padding: 0 5px;
+    padding: 0 15px;
 }
+
 .footer-col {
     width: 25%;
-    padding: 0 5px;
+    padding: 5px;
 }
+
 .footer-col h4 {
     font-size: 18px;
     color: #ffffff;
     text-transform: capitalize;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-weight: 500;
     position: relative;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
-/*.footer-col h4::before {
+
+.footer-col h4::before {
     content: '';
     position: absolute;
     left: 0;
@@ -114,12 +134,14 @@ p.card-text {
     height: 2px;
     box-sizing: border-box;
     width: 50px;
-}*/
+}
+
 .footer-col ul li:not(:last-child){
     margin-bottom: 5px;
 }
+
 .footer-col ul li a {
-    font-size: 10px;
+    font-size: 16px;
     text-transform: capitalize;
     color: #ffffff;
     text-decoration: none;
@@ -128,15 +150,17 @@ p.card-text {
     display: block;
     transition: all 0.3s ease;
 }
+
 .footer-col ul li a:hover{
     color: #ffffff;
-    padding: 5px;
+    padding: 2px;
 }
-/*.footer-col .social-links a{
+
+.footer-col .social-links a {
     display: inline-block;
     height: 10px;
     width: 40px;
-    background-color: rgba(255, 255, 255, o.2);
+    background-color: rgba(255, 255, 255, o.2);   /*is it zero ???*/
     margin: 0 2px 2px 0;
     text-align: center;
     line-height: 20px;
@@ -144,11 +168,12 @@ p.card-text {
     color: #ffffff;
     transition: all 0.5s ease;
 }
+
 .footer-col .social-links a:hover{
     color: #24262b;
     background-color: #ffffff;
 }
-*/
+
 /* Responsive */
 @media(max-width: 767px){
     .footer-col {
@@ -156,6 +181,7 @@ p.card-text {
         margin-bottom: 5px;
     }
 }
+
 @media(max-width: 576px){
     .footer-col {
         width: 100%;
@@ -175,13 +201,13 @@ input.form-control {
 }
   
 textarea.form-control {
-      width: 100%;
-      height: 80px;
-      padding: 1%;
-      margin: 0%;
-      font-size: 75%;
-      text-align: start;
-      border: 1px solid black; 
+    width: 100%;
+    height: 80px;
+    padding: 1%;
+    margin: 0%;
+    font-size: 75%;
+    text-align: start;
+    border: 1px solid black; 
 }
 
 .form-group {
