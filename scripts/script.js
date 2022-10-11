@@ -17,13 +17,14 @@ class RecipeController {
          this.currentId = currentId;
      };
 
-     addRecipe(title, description, imgURL, createdAt){ 
+     addRecipe(title, description, imgURL, createdAt, nameHTML){ 
          const recipe = {   //recipe is an object
              id: this.currentId++,
              title: title,
              description: description,
              imgURL: imgURL,
-             createdAt: createdAt
+             createdAt: createdAt,
+             nameHTML: nameHTML
          };
 
          this.recipes.push(recipe); 
@@ -40,14 +41,16 @@ class RecipeController {
 };
 
 cookBook = new RecipeController();
-cookBook.addRecipe("Napolitan Tomato Sauce","My wife's Family Recipe for Napolitan Style Tomato Sauce!","./images/NapolitanSauce.jpg","09/23/2022");
-cookBook.addRecipe("Roman Tomato Sauce","My wife's Family Recipe for Roman Style Tomato Sauce!","./images/RomanSauce.jpg","09/23/2022");
-cookBook.addRecipe("Turino Tomato Sauce","My wife's Family Recipe for Turino Style Tomato Sauce!","./images/san-marzano-tomato-sauce-2.jpg","09/23/2022");
-cookBook.addRecipe("Borscht","Everyone knows what it is and many people around the world have fallen in love with this iconic beet soup.","./images/Borscht.jpg","09/23/2022");
-cookBook.addRecipe("Grilled Cheese","Old Fashioned Grilled Cheese Sandwich - like mom made","./images/grilled-cheese-sandwich.jpg","09/24/2022");
-cookBook.addRecipe("Chunky Blue Cheese Burger - Perfect For Football","A hamburger for the millenium - juicy ground beef and chunks of bleu cheese!","./images/Chunky Blue Cheese Burger.jpg","09/23/2022");
-cookBook.addRecipe("Beef Stroganoff","Golden seared juicy beef strips smothered in a sour cream mushroom gravy","./images/Classic Beef Stroganoff.jpg","09/23/2022");
-cookBook.addRecipe("Ultimate Oven Barbecued Ribs","These easy oven baked ribs with brown sugar are fall-off-the bone delicious.","./images/Grilled-BBQ-Ribs-8.jpg","09/23/2022");
+cookBook.addRecipe("Napolitan Tomato Sauce","My wife's Family Recipe for Napolitan Style Tomato Sauce!","./images/NapolitanSauce.jpg","09/23/2022","#");
+cookBook.addRecipe("Roman Tomato Sauce","My wife's Family Recipe for Roman Style Tomato Sauce!","./images/RomanSauce.jpg","09/23/2022","#");
+cookBook.addRecipe("Turino Tomato Sauce","My wife's Family Recipe for Turino Style Tomato Sauce!","./images/san-marzano-tomato-sauce-2.jpg","09/23/2022","#");
+cookBook.addRecipe("Borscht","Many people around the world have fallen in love with this iconic Ukranian soup, which was recognated on an Intangible Cultural Heritage list maintained by UNESCO","./images/Borscht.jpg","09/23/2022","borsch.html");
+cookBook.addRecipe("Grilled Cheese","Old Fashioned Grilled Cheese Sandwich - like mom made","./images/grilled-cheese-sandwich.jpg","09/24/2022","#");
+cookBook.addRecipe("Chunky Blue Cheese Burger - Perfect For Football","A hamburger for the millenium - juicy ground beef and chunks of bleu cheese!","./images/Chunky Blue Cheese Burger.jpg","09/23/2022","#");
+cookBook.addRecipe("Beef Stroganoff","Golden seared juicy beef strips smothered in a sour cream mushroom gravy","./images/Classic Beef Stroganoff.jpg","09/23/2022","#");
+cookBook.addRecipe("Ultimate Oven Barbecued Ribs","These easy oven baked ribs with brown sugar are fall-off-the bone delicious.","./images/Grilled-BBQ-Ribs-8.jpg","09/23/2022","#");
+cookBook.addRecipe("Small House","Ukranian cheese cake without oven","./images/Small House 2.jpeg","10/11/2022","smallhouse.html");
+
 //console.log(cookBook.addRecipe[2]);
 
 for (i=0; i < cookBook.recipes.length; i++){
@@ -62,7 +65,7 @@ function addRecipeCard(recipe) {
         '        <h5 class="card-title">' + recipe.title + '</h5>\n' +
         '        <p class="card-text">' + recipe.description + '</p>\n' + 
         '        <div class="btn-group-sm">\n' +
-        '          <a href="#" class="btn btn-primary btn-sm m-1">View</a>\n' +
+        '          <a href="'+recipe.nameHTML+'" class="btn btn-primary btn-sm m-1">View</a>\n' +
         '        </div>\n' +
         '  </div>\n' +
         '</div>\n' +
